@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes rainbow-pulse {
+  0% { border-color: red; }
+  25% { border-color: orange; }
+  50% { border-color: green; }
+  75% { border-color: blue; }
+  100% { border-color: purple; }
+}
+
+.main {
+  padding: 10px;
+  background-color: rgb(250, 211, 218);
+  height: 100%;
+}
+
+.content {
+  border: 3px solid;
+  animation: rainbow-pulse 2s infinite alternate;
+}
